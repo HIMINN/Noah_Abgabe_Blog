@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Impressionismus</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <title>Typo</title>
+    <style>
+        :root {
+            font-family: 'Inter';
+            font-weight: 200;
+            line-height: 25px;
+            letter-spacing: 0.5px;
+            margin: 5px;
+        }
+
+
+        h1 {
+            font-size: 9vw;
+            letter-spacing: 0.07em;
+
+
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.2rem;
+            line-height: 35px;
+        }
+
+        h3 {
+            font-size: 1rem;
+            padding-top: 1rem;
+            margin-bottom: 0;
+        }
+
+        .titelbild {
+            width: 100%;
+            height: auto;
+
+        }
+
+        .claude {
+            width: 100%;
+            height: auto;
+        }
+
+        .bildoben {
+            margin-bottom: 30px;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+
+        p {
+            font-weight: 300;
+            margin-top: 0.4rem;
+        }
+
+        .einleitung {
+            font-weight: 500;
+            font-size: 1.2rem;
+            line-height: 27px;
+
+
+        }
+
+        .raum1 {
+            height: 25px;
+            width: 100%;
+        }
+
+        .raum {
+            height: 100px;
+            width: 100%;
+        }
+
+        .beschriftung {
+            margin-left: 10px;
+            margin-top: 5px;
+            margin-left: 20px;
+
+        }
+
+        .marginpic {
+            margin-top: -20px;
+        }
+
+
+
+
+        @media only screen and (min-width: 750px) {
+
+
+            .claude {
+                width: 50%;
+                height: auto;
+            }
+
+            h1 {
+                font-size: 4rem;
+                letter-spacing: 0.07em;
+            }
+
+
+
+            .container {
+
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            .item {
+
+                width: 48%;
+
+            }
+
+            .content {
+                width: 96%;
+                max-width: 66rem;
+
+                margin: 0 auto;
+            }
+
+            .container {
+
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            .item {
+
+                width: 48%;
+
+            }
+
+            .content {
+                width: 96%;
+                max-width: 66rem;
+
+                margin: 0 auto;
+            }
+
+        }
+
+
+
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        table,
+        td,
+        tr,
+        th {
+            border: 0.5px solid black;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        td,
+        tr,
+        th {
+            padding: 1em;
+        }
+
+        th {
+            background: #eee;
+            font-weight: bold;
+        }
+
+        @media screen and (max-width:750px) {
+
+            table,
+            tr,
+            td {
+                padding: 0;
+                border: 1px solid rgb(152, 152, 152);
+            }
+
+            table {
+                border: none;
+            }
+
+            thead {
+                display: none;
+            }
+
+            tr {
+                float: left;
+                width: 100%;
+                margin-bottom: 2em;
+            }
+
+            td {
+                float: left;
+                width: 100%;
+                padding: 1em;
+            }
+
+            td::before {
+                content: attr(data-label);
+                word-wrap: break-word;
+                background: #eee;
+                border-right: 2px solid black;
+                width: 20%;
+                float: left;
+                padding: 1em;
+                font-weight: bold;
+                margin: -1em 1em -1em -1em;
+            }
+        }
+
+        .containereinleitung {
+            max-width: 780px;
+        }
+
+        .teaser {
+            font-weight: 300;
+            font-size: 2rem;
+        }
+
+        .button {
+            background-color: #4CAF50;
+            /* Green */
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+        .button5 {
+            background-color: white;
+            color: black;
+            border: 2px solid #555555;
+        }
+
+        .button5:hover {
+            background-color: #555555;
+            color: white;
+        }
+
+        .contaier10 {
+            display: flex;
+        }
+
+        a {
+            text-decoration: none;
+            color: blue;
+        }
+
+        a:link {
+            text-decoration: none;
+            color: blue;
+        }
+
+        a:visited {
+
+            color: rgb(105, 108, 114);
+
+        }
+
+        a:hover {
+            color: hotpink;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="titelbild"><img src="Claude.png" alt=""></div>
+    </div>
+
+    <div class="raum"></div>
+
+    <div class="content">
+        <div class="contaier10">
+            <h1>Impressionismus</h1>
+        </div>
+        <p>20.01.2022 - Noah Ortner</p>
+
+        <p class="einleitung containereinleitung"> Impressionismus ist eine
+            Stilrichtung in der Kunstgeschichte, die durch die stimmungsvolle Darstellung von flüchtigen Momentaufnahmen
+            einer Szenerie gekennzeichnet ist. Sie entstand aus einer Bewegung innerhalb der Malerei in Frankreich in
+            der zweiten Hälfte des 19.&#x202F;Jahrhunderts. Der Begriff Impressionismus wurde auch auf bestimmte
+            Stilrichtungen
+            in der Musik, in der Literatur, im Film und in der Fotografie übertragen.
+        </p>
+
+        <div class="raum1"></div>
+
+        <h2>Begriff</h2>
+
+        <div class="container">
+
+            <div class="item">
+                <p>Schon 1861 bezeichnete Théophile Gautier Daubignys Malweise, die er als zu flüchtig empfand, als
+                    «Impression». Der Begriff Impressionismus bzw. französisch impressionnisme, abgeleitet von
+                    lateinisch impressio «Eindruck», etablierte sich als kunstwissenschaftlicher Begriff 1874, als ihn
+                    einige Rezensenten aufgriffen, um die Werke der jungen Künstler in der am 15.&#x202F;April&nbsp;1874
+                    eröffneten
+                    Ausstellung am Boulevard des Capucines 35 zu beschreiben. Der progressiv-radikale Journalist und
+                    Kunstkritiker Jules-Antoine Castagnary, der schon die Rolle seines Freundes Gustave&nbsp; Courbet in
+                    der
+                    Pariser Kommune verteidigt hatte, erörterte in seinem Aufsatz unter anderem die Frage, wie die
+                    Künstlergruppe zu nennen sei.
+                    Mit Verweis auf Monets Gemälde Impression – soleil levant (Impressions – Sonnenaufgang) kommentierte
+                    er: «Wollte man sie mit einem erläuternden Wort charakterisieren, müsste man den neuen Begriff
+                    Impressionisten schaffen. </p>
+            </div>
+            <div class="item">
+                <p>
+
+                    In der kunsthistorischen Literatur wird oftmals der Kunstkritiker Louis Leroy als Schöpfer des
+                    Begriffs Impressionismus genannt. Dieser veröffentlichte am 25.&#x202F;April&nbsp;1874 einen Artikel
+                    in der
+                    Satirezeitschrift Le Charivari und leitete aus Monets Gemälde die abschätzig gemeinte Bezeichnung
+                    ab.Wie Ian Dunlop jedoch anmerkt, ist der Begriff des Impressionismus bereits in den 1860er und
+                    1870er Jahren gebräuchlich und vor Monet schon im Zusammenhang mit anderen Landschaftsmalern genutzt
+                    worden.In der Folge verwendeten zahlreiche Künstler diese Bezeichnung, die bei den
+                    Vorbereitungen zur dritten Impressionisten-Ausstellung im Jahr 1877 auch offiziell Verwendung fand.
+                    Sie sind Impressionisten in dem Sinn, dass sie nicht eine Landschaft wiedergeben, sondern den von
+                    ihr hervorgerufenen Eindruck.»</p>
+            </div>
+
+            <div class="raum"></div>
+
+            <div class="container contentmargin">
+                <div class="claude"><img src="c.png" alt="">
+                    <div class="container beschriftung bildoben">Claude Monet</div>
+                </div>
+
+                <div class="claude"><img src="edu.png" alt="">
+                    <div class="container beschriftung">Édouard Manet</div>
+                </div>
+                <div class="raum"></div>
+            </div>
+
+
+
+            <div class="content">
+                <h2>Impressionismus in der Malerei</h2>
+
+                <div class="container">
+
+                    <div class="item">
+                        <p>
+                            Das Gemälde Impression — soleil levant (1872) von Claude&nbsp;Monet gab der Bewegung ihren
+                            Namen.
+                            Sie
+                            zeichnete sich jedoch weitaus früher ab. Bereits die Arbeiten Édouard&nbsp;Manets aus den
+                            1860er
+                            Jahren
+                            zeigen grundlegende Elemente des beginnenden Bruchs mit der akademischen Lehrmeinung – etwa
+                            Musik in
+                            den Tuilerien. Die erste Gruppenausstellung der Impressionisten fand 1874 im Atelier des
+                            Pariser
+                            Fotografen Nadar statt.
+
+                            Die Darstellung des Lichts und der atmosphärischen Bedingungen wurde im Impressionismus zur
+                            malerischen Hauptaufgabe. Farbe wurde als Folge von Licht und Atmosphäre gesehen und als
+                            Träger des
+                            Lichts wiedergegeben. Der teilweise Verzicht auf Schwarz und erdige Farbtöne liess die
+                            Farbpalette
+                            aufhellen.
+
+                            Die Künstler lösten sich von der malerischen Abbildungsfunktion. Unmittelbarkeit der
+                            Momentaufnahme
+                            und Zufälligkeit des Bildausschnittes sind charakterisierende Merkmale impressionistischer
+                            Bilder.
+                            Durch die Fotografie angeregt wurde auch der Verzicht auf Vollständigkeit zugunsten der
+                            Erzeugung
+                            von Stimmungen. Dieses Ziel erreichten radikale Impressionisten wie Gustave Caillebotte (Die
+                            Parkettschleifer) durch Nutzung fotografischer Stilmittel wie z.​&#x202F;B. von Moment- und
+                            Bewegungsaufnahmen, extremen Perspektiven und Verzerrungen, selektiven Ausschnitten und
+                            Unschärfen.
+                            Neue Erkenntnisse ergaben sich durch die moderne Farbtheorie Chevreuls. Die industrielle
+                            Fertigung von Ölfarben in verschliessbaren Bleituben (statt in
+                            Schweinsblasen),
+                            patentiert im Jahr 1841 durch den amerikanischen Maler John&nbsp;Goffe&nbsp;Rand,
+                            ermöglichte die
+                            Freiluftmalerei.
+
+
+                        </p>
+                    </div>
+                    <div class="item">
+                        <p>
+
+                            Diese neue malerische Praxis, die mit einer neuen Welt- und Lebensanschauung zusammenhing,
+                            verbreitete sich um 1900 in ganz Europa. Von dort gelangte sie auch zum amerikanischen
+                            Kontinent
+                            (William&nbsp;Merritt&nbsp;Chase, Childe&nbsp;Hassam, Mary&nbsp;Cassatt) und bis nach
+                            Australien (Charles&nbsp;Conder).
+
+                            Der deutsche Impressionismus stellt hingegen einen Sonderweg dar. Er entwickelt sich aus dem
+                            Realismus bzw. Naturalismus durch «allmähliche Verfeinerung derselben stilistischen Mittel,
+                            und zwar
+                            nach der Seite des Sensualistischen hin, wodurch alle ideellen Faktoren hinfällig werden»
+                            und man
+                            sich stattdessen auf den Seheindruck beschränkt. So werde Max&nbsp;Liebermann durch die
+                            «Auflockerung
+                            seiner malerischen Technik und eine Vorliebe für lichtdurchrieselte Blätterdächer langsam
+                            zum
+                            Impressionisten, ohne dabei seine naturalistischen Errungenschaften aufzugeben.» Das wirke
+                            bei
+                            unimpressionistischen Themen oft aufgesetzt. Anders als in Frankreich entstünden
+                            «Mischprodukte»,
+                            denen es an Strahlkraft fehle. Auch Lovis&nbsp;Corinth begann mit realistischen, bei
+                            religiösen
+                            Stoffen
+                            symbolistischen Gemälden; seine impressionistischen Arbeiten verweisen bereits auf den
+                            Expressionismus. Max&nbsp;Slevogt, der dritte bedeutende deutsche Impressionist, wurde
+                            zunächst
+                            von Manet
+                            und später – vor allem bei seiner Landschaftsmalerei – durch das Licht und die Farben
+                            während einer
+                            Ägyptenreise angeregt.</p>
+                    </div>
+
+
+
+                </div>
+
+                <div class="raum"></div>
+
+                <div class="container contentmargin">
+                    <div class="claude"><img src="Frédéric_Bazille.png" alt="">
+                        <div class="container beschriftung bildoben">Frédéric Bazille</div>
+                    </div>
+
+                    <div class="claude"><img src="Julian_Alden.png" alt="">
+                        <div class="container beschriftung">Julian Alden</div>
+                    </div>
+                </div>
+                <div class="raum"></div>
+
+
+                <h3>Sozialhistorischer Hintergrund</h3>
+
+                <div class="container">
+
+                    <div class="item">
+                        <p>Vor allem der deutsche Impressionismus wurde von einigen Sozial- und Kunsthistorikern als
+                            Dekadenzphänomen interpretiert, so zuerst von Karl&nbsp;Lamprecht und
+                            Eckart&nbsp;von&nbsp;Sydow. Lamprecht
+                            zufolge lässt er sich als ästhetische Reaktion auf den Naturalismus verstehen, gegen dessen
+                            «wahrheitssuchenden Aktivismus» und allzu plakative Aussagen sich eine Abneigung des Genuss
+                            und
+                            Entspannung suchenden Bürgertums entwickelte, das nicht mehr den «Elan der Gründerzeit»
+                            aufbrachte, sondern sich im Geschäft von seinen Prokuristen vertreten ließ und stattdessen
+                            gemütliches Behagen und Zerstreuung suchte. </p>
+                    </div>
+                    <div class="item">
+                        <p>
+
+                            Damit einher ging die Wiederentdeckung der
+                            differenzierten Genusskulturen des Hellenismus und des Rokoko sowie der
+                            burgundisch-flämischen
+                            Kultur, die die «Sehnsucht nach schönerem Leben» verkörperte.
+                        </p>
+                    </div>
+                </div>
+
+
+
+
+                <div class="raum"></div>
+
+
+
+                <div class="container contentmargin">
+                    <div class="claude"><img src="Piazzo_da_Mula.png" alt="">
+                        <div class="container beschriftung bildoben">Claude Monet</div>
+                    </div>
+
+                    <div class="claude"><img src="Mills_in_the_We.png" alt="">
+                        <div class="container beschriftung">Claude Monet</div>
+                    </div>
+                </div>
+                <div class="raum"></div>
+                <div class="container">
+                    <h2>Künstler und Ihre Werke</h2>
+                </div>
+
+                <div class="raum1"></div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Künstler</th>
+                            <th>Herkunft</th>
+                            <th>Name des Werkes</th>
+                            <th>Grösse, Material</th>
+                            <th>Ausstellung/Sammlung/Besitzer</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Künstler">Claude Monet</td>
+                            <td data-label="Herkunft">Frankreich</td>
+                            <td data-label="Name des Werkes">Der Palazzo da Mula</td>
+                            <td data-label="Grösse, Material">62 cm × 81 cm, Öl auf Leinwand</td>
+                            <td data-label="Ausstellung/Sammlung/Besitzer">National Gallery of Art in Washington D.C.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-label="Künstler">Frédéric Bazille</td>
+                            <td data-label="Herkunft">Frankreich</td>
+                            <td data-label="Name des Werkes">Das Familientreffen</td>
+                            <td data-label="Grösse, Material">152 cm x 227 cm, Öl auf Leinwand</td>
+                            <td data-label="Ausstellung/Sammlung/Besitzer">Musée d'Orsay in Paris</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Künstler">Julian Alden</td>
+                            <td data-label="Herkunft">USA</td>
+                            <td data-label="Name des Werkes">Die Rote Brücke</td>
+                            <td data-label="Grösse, Material">62 cm x 86 cm, Öl auf Leinwand</td>
+                            <td data-label="Ausstellung/Sammlung/Besitzer">Metropolitan Museum of Art</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Künstler">Claude Monet</td>
+                            <td data-label="Herkunft">Frankreich</td>
+                            <td data-label="Name des Werkes">Windmühlen bei Zaandam</td>
+                            <td data-label="Grösse, Material">47 cm × 73 cm, Öl auf Leinwand</td>
+                            <td data-label="Ausstellung/Sammlung/Besitzer">Van Gogh Museum in Amsterdam</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="raum"></div>
+
+                <h2>Andere interessante Beiträge</h2>
+                <div class="raum1"></div>
+
+                <div>
+                    <div><img src="Dali.png" alt="">
+                        <div class="raum1"></div>
+                        <div class="teaser">
+                            <p> «Wer war Salvador Dalí?» </p>
+                            <button class="button button5">Mehr erfahren</button>
+
+                        </div>
+                    </div>
+
+                    <div class="raum"></div>
+
+                    <div><img src="Blaue Reiter.png" alt="">
+                        <div class="raum1"></div>
+                        <div class="teaser">
+                            <p> «Der Expressionismus» </p>
+                            <button class="button button5">Mehr erfahren</button>
+
+                        </div>
+
+                    </div>
+                    <div class="raum"></div>
+
+                    <div>
+                        <p>Noah Ortner - HFIAD 21</p>
+                        <p>Quellen: Wikipedia (<a
+                                href="https://de.wikipedia.org/wiki/Impressionismus">Impressionismus</a>, <a
+                                href="https://de.wikipedia.org/wiki/Expressionismus#:~:text=Der%20Expressionismus%20(von%20lateinisch%20expressio,gegen%20die%20Tendenzen%20des%20Naturalismus.">Expressionismus</a>,
+                            <a href="https://de.wikipedia.org/wiki/Salvador_Dal%C3%AD">Salvador Dalí</a>, <a
+                                href="https://de.wikipedia.org/wiki/Claude_Monet">Claude Monet</a>, <a href="https://de.wikipedia.org/wiki/Liste_der_Maler_des_Impressionismus">Liste der Maler des Impressionismus</a>, <a href="https://de.wikipedia.org/wiki/%C3%89douard_Manet">Édouard Manet</a>) </p>
+                        <p>20.01.2022</p>
+                    </div>
+
+
+
+</body>
+
+</html>
